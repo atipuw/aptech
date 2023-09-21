@@ -1,0 +1,93 @@
+<!DOCTYPE html> <!-- Declaration of the document type as HTML5 -->
+<html lang="en"> <!-- Start of the HTML document with the language set to English -->
+
+<head>
+    <meta charset="UTF-8">  <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Meta tag for responsive design -->
+    <title>Contact Us!</title> <!-- Title of the webpage -->
+    <link rel="stylesheet" href="Styling.css"> <!-- Link to an external CSS file for styling -->
+    <link href="https://fonts.googleapis.com/css2?
+        family=Poppins:wght@800&display=swap" rel="stylesheet"> <!-- Link to a Google Fonts stylesheet -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script> <!-- Link to Google Maps API -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> <!-- Link to a polyfill for compatibility -->
+
+    <link rel="stylesheet" type="text/css" href="./style.css" /> <!-- Link to another external CSS file -->
+    <script type="module" src="./index.js"></script> <!-- Link to a JavaScript module -->
+    <link rel="script" href="Map.js">  <!-- Link to a JavaScript file for maps -->
+</head>
+
+<body class="wholePage"> <!-- Start of the webpage body with a class "wholePage" -->
+    <div class="container"> <!-- Container for content -->
+        <h1>Connect With Us</h1> <!-- Heading -->
+        <p>We would love to respond to your queries and help you succeed.<br> Feel
+            free to get in touch with us.</p>  <!-- Paragraph text -->
+    </div>
+    <div class="contact-box"> <!-- Container for contact information -->
+        <div class="contact-left"> <!-- Left section for contact form -->
+            <h3>Send your request</h3> <!-- Subheading -->
+            <form> <!-- Start of a form -->
+
+                <div class="input-row"> <!-- Container for input fields -->
+                    <div class="input-group">  <!-- Input field for Name -->
+                        <label>Name</label> <!-- Label for the input -->
+                        <input type="text" placeholder="Ahmed Salim"> <!-- Text input -->
+                    </div>
+                    <div class="input-group"> <!-- Input field for Phone -->
+                        <label>Phone</label> <!-- Label for the input -->
+                        <input type="text" placeholder="+974 66054713"> <!-- Text input -->
+                    </div>
+                </div>
+                <div class="input-row">  <!-- Container for input fields -->
+                    <div class="input-group"> <!-- Input field for Email -->
+                        <label>Email</label> <!-- Label for the input -->
+                        <input type="email" placeholder="AhmedSalim@gmail.com"> <!-- Text input -->
+                    </div>
+                    <div class="input-group">  <!-- Input field for Subject -->
+                        <label>Subject</label> <!-- Label for the input -->
+                        <input type="text" placeholder="project demo"> <!-- Text input -->
+                    </div>
+                </div>
+
+                <label>Message</label> <!-- Label for the message textarea -->
+                <textarea rows="5" placeholder="Your Message"></textarea> <!-- Textarea for the message -->
+
+                <button type="submit">Send</button>  <!-- Submit button for the form -->
+            </form>  <!-- End of the form -->
+
+        </div>
+        <div class="contact-right" style="background-color: darkolivegreen;"> <!-- Right section for contact details -->
+            <h3>Reach Us</h3> <!-- Subheading -->
+
+            <table> <!-- Table for contact information -->
+                <tr> <!-- Table row for Email -->
+                    <td>Email</td> <!-- Table cell for Email label -->
+                    <td><a href="mailto:example@example.com">mains@safecarz.com</a></td> <!-- Table cell with an email link -->
+                </tr>
+                <tr> <!-- Table row for Phone -->
+                    <td>Phone</td>
+                    <td>+974 4444 1111</td>
+                </tr>
+                <tr> <!-- Table row for Location -->
+                    <td>Location</td>
+                    <td>Doha Qatar, Aptech Education Center, PO Box.100001</td>
+                    <div id="google-map" style="width: 70%; height: 300px;"></div> <!-- Div for displaying Google Map -->
+                      <script>
+                          function initMap() {
+                          var map = new google.maps.Map(document.getElementById('google-map'), {
+                             center: { lat:  25.2568911, lng: 51.5460917 }, // Set the initial map center (latitude and longitude)
+                             zoom: 10, // Set the initial zoom level
+                              });
+                            }
+                      </script>                 
+                      <script>
+                         initMap();  // Call the initMap function to initialize the map
+                      </script>
+                </tr>
+            </table> <!--End of the table-->
+        </div>
+    </div>
+   
+        
+</body> <!--End of the webpage body-->
+
+</html> <!--End of the HTML document -->
